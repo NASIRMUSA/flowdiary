@@ -195,3 +195,83 @@
     animation: flight 4s ease-in-out forwards;
     }
     }
+/* Animations */
+@keyframes path-dash {
+    from {
+        stroke-dashoffset: 100;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes profile-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: rotate(6deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(6deg) translateY(-10px);
+    }
+}
+
+.animate-path-dash {
+    animation: path-dash 2s ease-out forwards;
+}
+
+.animate-profile-float {
+    animation: profile-float 4s ease-in-out infinite;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Delay animations for staggered effect */
+[style*="animation-delay"] {
+    animation-fill-mode: both;
+}
+ @keyframes float {
+
+     0%,
+     100% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-10px);
+     }
+ }
+
+ @keyframes fade-in {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ .animate-float {
+     animation: float 6s ease-in-out infinite;
+ }
+
+ .animate-fade-in {
+     animation: fade-in 1.5s ease-out forwards;
+ }

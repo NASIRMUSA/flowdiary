@@ -101,3 +101,8 @@ const isElementInViewport = (el) => {
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
 window.addEventListener("scroll", animateCountUp);
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".current-year").textContent =
+    new Date().getFullYear();
+});
